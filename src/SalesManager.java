@@ -1,4 +1,5 @@
 package src;
+
 public class SalesManager {
     protected int[] sales;
 
@@ -14,5 +15,23 @@ public class SalesManager {
             }
         }
         return max;
+    }
+
+    public int min() {
+        int min = sales[0];
+        for (int sale : sales) {
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        return min;
+    }
+
+    public int average() {
+        int averange = 0;
+        for (int sale : sales) {
+            averange += sale;
+        }
+        return (averange - min() - max()) / ((sales.length) - 2);
     }
 }
