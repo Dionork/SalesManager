@@ -1,3 +1,5 @@
+package src;
+
 import src.SalesManager;
 
 public class Main {
